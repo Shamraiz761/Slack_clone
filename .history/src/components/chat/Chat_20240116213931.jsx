@@ -76,7 +76,7 @@ function Chat() {
           type="text"
           value={input}
           onChange={(e) => setInput(e.target.value)}
-          className="w-4/5 mx-3 rounded-md border shadow-md  px-3 py-2"
+          className="w-8/3 mx-3 rounded-md border shadow-md  px-3 py-2"
           placeholder="type"
         />
         <button

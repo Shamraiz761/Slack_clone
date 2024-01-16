@@ -4,13 +4,13 @@ import Sidebar from "./components/sidebar/Sidebar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Chat from "./components/chat/Chat";
 function App() {
-  const [user,setUser] = useState(true);
+  const [user,setUser] = useState(null);
   return (
     <div >
-    <Router>
+    <Router></Router>
         {
-          !user ?(<h1>login</h1>)  : (
-            <>
+          !user ? <h1>login</h1> : (
+            
             <Header />
             <div className="flex ">
             <Sidebar className="overflow-y-hidden"/>
@@ -23,11 +23,11 @@ function App() {
             </Routes>
            
             </div>
-            </>
+
           )
         }
       
-      </Router>
+    
     </div>
   );
 }

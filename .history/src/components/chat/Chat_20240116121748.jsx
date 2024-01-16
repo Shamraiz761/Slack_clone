@@ -17,12 +17,12 @@ function Chat() {
     db.collection("rooms")
       .doc(id)
       .collection("messages")
-      .orderBy("timestamps", "asc")
       .onSnapshot((snapshot) => {
         setMessages(snapshot.docs.map((doc) => doc.data()));
       });
   }, [id]);
 
+  console.log(messages);
 
   return (
     <div className="w-full ">
@@ -34,17 +34,8 @@ function Chat() {
           <span>Details</span>
         </div>
       </div>
-      <div className="m-5">
-        {messages.map((message) => (
-          <div className="flex flex-row  ">
-            <img src={message.userImage} className="h-12 w-12 rounded-full"/>
-            <div className="ml-2 flex flex-col">
-            <span className="  font-semibold">{message.username}</span>
-            <span className=" text-sm ">{message.message}</span>
-
-            </div>
-          </div>
-        ))}
+      <div>
+        
       </div>
     </div>
   );

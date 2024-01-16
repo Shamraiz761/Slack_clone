@@ -23,6 +23,7 @@ function Chat() {
       });
   }, [id]);
 
+  console.log(messages);
 
   return (
     <div className="w-full ">
@@ -34,13 +35,13 @@ function Chat() {
           <span>Details</span>
         </div>
       </div>
-      <div className="m-5">
+      <div className="ml-3 mt-3 ">
         {messages.map((message) => (
-          <div className="flex flex-row  ">
-            <img src={message.userImage} className="h-12 w-12 rounded-full"/>
-            <div className="ml-2 flex flex-col">
-            <span className="  font-semibold">{message.username}</span>
-            <span className=" text-sm ">{message.message}</span>
+          <div className="flex flex-row items-center ">
+            <img src={message.userImage} className="h-10 w-10 rounded-full"/>
+            <div>
+            <span className="ml-2 text-sm font-semibold">{message.username}</span>
+            <span className="ml-2 text-sm ">{message.message}</span>
 
             </div>
           </div>

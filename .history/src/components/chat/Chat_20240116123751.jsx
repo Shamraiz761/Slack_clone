@@ -23,6 +23,7 @@ function Chat() {
       });
   }, [id]);
 
+  console.log(messages);
 
   return (
     <div className="w-full ">

@@ -23,6 +23,7 @@ function Chat() {
       });
   }, [id]);
 
+  console.log(messages);
 
   return (
     <div className="w-full ">
@@ -37,7 +38,7 @@ function Chat() {
       <div className="m-5">
         {messages.map((message) => (
           <div className="flex flex-row  ">
-            <img src={message.userImage} className="h-12 w-12 rounded-full"/>
+            <img src={message.userImage} className="h-13 w-10 rounded-full"/>
             <div className="ml-2 flex flex-col">
             <span className="  font-semibold">{message.username}</span>
             <span className=" text-sm ">{message.message}</span>

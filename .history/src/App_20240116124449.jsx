@@ -4,7 +4,7 @@ import Sidebar from "./components/sidebar/Sidebar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Chat from "./components/chat/Chat";
 function App() {
-  const [user,setUser] = useState(true);
+  const [user,setUser] = useState(null);
   return (
     <div >
     <Router>
@@ -23,7 +23,7 @@ function App() {
             </Routes>
            
             </div>
-            </>
+ 
           )
         }
       
